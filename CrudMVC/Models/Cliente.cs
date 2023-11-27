@@ -52,3 +52,5 @@ namespace CrudMVC.Models
         public DateTime DataAdmissao { get; set; }    
     }
 }
+
+
