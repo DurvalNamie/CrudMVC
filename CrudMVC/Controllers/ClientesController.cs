@@ -1,4 +1,5 @@
 ﻿using CrudMVC.Models;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
@@ -49,7 +50,7 @@ namespace CrudMVC.Controllers
                 db.Clientes.Add(cliente);
                 db.SaveChanges();
                 return RedirectToAction("Index");
-            }
+            }   
 
             return View(cliente);
         }
@@ -74,7 +75,7 @@ namespace CrudMVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Matricula,Nome,DataNascimento,Email,Telefone,Endereco,Empresa,Funcao,Ativo")] Cliente cliente)
+        public ActionResult Edit([Bind(Include = "Id,Matricula,Nome,DataNascimento,Email,Telefone,Endereco,Empresa,Funcao,Ativo,DataAdmissao")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {

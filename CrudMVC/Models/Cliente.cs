@@ -19,7 +19,7 @@ namespace CrudMVC.Models
 
         
         [Display(Name ="Data de Nascimento")]
-        [DisplayFormat(DataFormatString ="{0:dd/MM/yyyy}", ApplyFormatInEditMode =true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataNascimento { get; set; }
 
         [Required]
@@ -49,6 +49,6 @@ namespace CrudMVC.Models
 
         [Display(Name = "DataAdmissao")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime DataAdmissao { get; set; }
+        public DateTime DataAdmissao { get; set; }    
     }
 }
